@@ -1,4 +1,4 @@
-package com.course_learning.backend;
+package com.course_learning.backend.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
