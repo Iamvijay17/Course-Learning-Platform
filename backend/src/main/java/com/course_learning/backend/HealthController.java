@@ -10,7 +10,7 @@ import java.util.Map;
 @RestController
 public class HealthController {
 
-    @GetMapping("/api/v1/health")
+    @GetMapping("/api/health")
     public Map<String, Object> health() {
         Map<String, Object> response = new HashMap<>();
         response.put("message", "API is up and running...");
