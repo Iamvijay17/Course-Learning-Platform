@@ -6,7 +6,7 @@ This documentation provides comprehensive system design and architecture details
 
 ## Documentation Structure
 
-### 📋 [System Architecture Overview](system-architecture-overview.md)
+### 📋 [System Architecture Overview](architecture/system-architecture-overview.md)
 High-level architecture, technology stack, service decomposition, data flow, and scalability features.
 
 **Key Topics:**
@@ -15,7 +15,7 @@ High-level architecture, technology stack, service decomposition, data flow, and
 - Service decomposition (Course, User, Enrollment services)
 - Security considerations and deployment strategy
 
-### 🏗️ [Microservices Design](microservices-design.md)
+### 🏗️ [Microservices Design](architecture/microservices-design.md)
 Detailed design of individual microservices including APIs, database schemas, and communication patterns.
 
 **Key Topics:**
@@ -25,7 +25,7 @@ Detailed design of individual microservices including APIs, database schemas, an
 - Service communication (REST, events)
 - Shared components and exception handling
 
-### 🗄️ [Database Schema Design](database-schema.md)
+### 🗄️ [Database Schema Design](database/database-schema.md)
 Complete database design with optimized schemas, indexing strategies, and performance optimizations.
 
 **Key Topics:**
@@ -34,7 +34,7 @@ Complete database design with optimized schemas, indexing strategies, and perfor
 - Indexing and performance strategies
 - Data consistency and migration approaches
 
-### 🔌 [API Design](api-design.md)
+### 🔌 [API Design](api/api-design.md)
 RESTful API design with authentication, error handling, rate limiting, and documentation.
 
 **Key Topics:**
@@ -44,7 +44,7 @@ RESTful API design with authentication, error handling, rate limiting, and docum
 - Rate limiting and caching strategies
 - OpenAPI documentation
 
-### 🔐 [Authentication & Authorization](authentication.md)
+### 🔐 [Authentication & Authorization](api/authentication.md)
 Comprehensive security implementation with JWT tokens, RBAC, and security best practices.
 
 **Key Topics:**
@@ -54,7 +54,7 @@ Comprehensive security implementation with JWT tokens, RBAC, and security best p
 - API Gateway security and session management
 - Multi-factor authentication planning
 
-### 🎨 [Frontend Architecture](frontend-architecture.md)
+### 🎨 [Frontend Architecture](architecture/frontend-architecture.md)
 React.js frontend design with state management, routing, and modern development practices.
 
 **Key Topics:**
@@ -64,7 +64,7 @@ React.js frontend design with state management, routing, and modern development 
 - Custom hooks and API integration
 - Testing strategies and build optimization
 
-### 🚀 [Deployment & CI/CD](deployment-cicd.md)
+### 🚀 [Deployment & CI/CD](deployment/deployment-cicd.md)
 Containerization, automated pipelines, and deployment strategies using Docker and GitHub Actions.
 
 **Key Topics:**
@@ -74,7 +74,7 @@ Containerization, automated pipelines, and deployment strategies using Docker an
 - Infrastructure as Code (Terraform, Helm)
 - Performance optimization and backup strategies
 
-### 📊 [Monitoring & Observability](monitoring.md)
+### 📊 [Monitoring & Observability](deployment/monitoring.md)
 Comprehensive monitoring setup with Spring Actuator, logging, metrics, and alerting.
 
 **Key Topics:**
@@ -84,7 +84,7 @@ Comprehensive monitoring setup with Spring Actuator, logging, metrics, and alert
 - Distributed tracing with Jaeger
 - Alerting with Alertmanager and incident response
 
-### 📋 [Development Planning](development-planning.md)
+### 📋 [Development Planning](development/development-planning.md)
 Complete project development plan with phases, timelines, team structure, and resource allocation.
 
 **Key Topics:**
@@ -95,7 +95,7 @@ Complete project development plan with phases, timelines, team structure, and re
 - Budget estimation and resource planning
 - Success metrics and KPIs
 
-### 🗂️ [Repository Structure & Management](repository-structure.md)
+### 🗂️ [Repository Structure & Management](development/repository-structure.md)
 Comprehensive guide for organizing and managing the project repository.
 
 **Key Topics:**
@@ -105,6 +105,16 @@ Comprehensive guide for organizing and managing the project repository.
 - CI/CD pipeline organization
 - Code quality gates and collaboration guidelines
 - Repository maintenance and backup strategies
+
+### 📁 [Folder and Files Structure Management](folder-and-files-structure-management.md)
+Guidelines and best practices for managing folder and file structures within the project.
+
+**Key Topics:**
+- Project structure principles and naming conventions
+- Backend, frontend, and infrastructure organization patterns
+- File management best practices and version control
+- Maintenance guidelines and restructuring procedures
+- Tooling support for structure consistency
 
 ### 📊 [Development Tracking Spreadsheet](development-tracking.csv)
 Comprehensive Excel-compatible CSV file for tracking development progress across all 32 weeks.
@@ -143,20 +153,20 @@ Professional Google Sheets template with colors, dropdowns, and automated dashbo
 ## Quick Start
 
 ### For Developers
-1. **Architecture Overview**: Start with [System Architecture Overview](system-architecture-overview.md)
-2. **Service Development**: Refer to [Microservices Design](microservices-design.md) for service-specific details
-3. **Database Setup**: Check [Database Schema Design](database-schema.md) for data models
-4. **API Integration**: Use [API Design](api-design.md) for endpoint specifications
+1. **Architecture Overview**: Start with [System Architecture Overview](architecture/system-architecture-overview.md)
+2. **Service Development**: Refer to [Microservices Design](architecture/microservices-design.md) for service-specific details
+3. **Database Setup**: Check [Database Schema Design](database/database-schema.md) for data models
+4. **API Integration**: Use [API Design](api/api-design.md) for endpoint specifications
 
 ### For DevOps Engineers
-1. **Deployment**: Follow [Deployment & CI/CD](deployment-cicd.md) for infrastructure setup
-2. **Monitoring**: Configure monitoring using [Monitoring & Observability](monitoring.md)
-3. **Security**: Implement authentication from [Authentication & Authorization](authentication.md)
+1. **Deployment**: Follow [Deployment & CI/CD](deployment/deployment-cicd.md) for infrastructure setup
+2. **Monitoring**: Configure monitoring using [Monitoring & Observability](deployment/monitoring.md)
+3. **Security**: Implement authentication from [Authentication & Authorization](api/authentication.md)
 
 ### For Frontend Developers
-1. **Component Structure**: Review [Frontend Architecture](frontend-architecture.md)
-2. **API Integration**: Use [API Design](api-design.md) for backend communication
-3. **Authentication**: Implement login/auth flows from [Authentication & Authorization](authentication.md)
+1. **Component Structure**: Review [Frontend Architecture](architecture/frontend-architecture.md)
+2. **API Integration**: Use [API Design](api/api-design.md) for backend communication
+3. **Authentication**: Implement login/auth flows from [Authentication & Authorization](api/authentication.md)
 
 ## Technology Stack Summary
 
