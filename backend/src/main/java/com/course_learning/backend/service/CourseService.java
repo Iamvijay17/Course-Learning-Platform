@@ -80,6 +80,55 @@ public class CourseService {
                 });
     }
 
+    public List<CourseDto> getCoursesByStatus(String status) {
+        try {
+            Course.CourseStatus courseStatus = Course.CourseStatus.valueOf(status.toUpperCase());
+            return courseRepository.findByStatus(courseStatus).stream()
+                    .map(this::convertToDto)
+                    .collect(Collectors.toList());
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Invalid status: " + status);
+        }
+    }
+
+    public List<CourseDto> getCoursesByInstructorAndStatus(Long instructorId, String status) {
+        try {
+            Course.CourseStatus courseStatus = Course.CourseStatus.valueOf(status.toUpperCase());
+            return courseRepository.findByInstructorIdAndStatus(instructorId, courseStatus).stream()
+                    .map(this::convertToDto)
+                    .collect(Collectors.toList());
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Invalid status: " + status);
+        }
+    }
+
+    public long countCoursesByStatus(String status) {
+        try {
+            Course.CourseStatus courseStatus = Course.CourseStatus.valueOf(status.toUpperCase());
+            return courseRepository.countByStatus(courseStatus);
+        } catch (IllegalArgumentException e) {
+            throw new IllegalArgumentException("Invalid status: " + status);
+        }
+    }
+
+    public Optional<CourseDto> archiveCourse(Long id) {
+        return courseRepository.findById(id)
+                .map(course -> {
+                    course.setStatus(Course.CourseStatus.ARCHIVED);
+                    Course updatedCourse = courseRepository.save(course);
+                    return convertToDto(updatedCourse);
+                });
+    }
+
+    public Optional<CourseDto> draftCourse(Long id) {
+        return courseRepository.findById(id)
+                .map(course -> {
+                    course.setStatus(Course.CourseStatus.DRAFT);
+                    Course updatedCourse = courseRepository.save(course);
+                    return convertToDto(updatedCourse);
+                });
+    }
+
     private CourseDto convertToDto(Course course) {
         return new CourseDto(
                 course.getCourseId(),

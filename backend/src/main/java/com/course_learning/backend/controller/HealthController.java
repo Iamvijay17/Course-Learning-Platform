@@ -10,8 +10,9 @@ public class HealthController {
 
     @GetMapping("/api/health")
     public Map<String, Object> health() {
+        System.out.println("==================>API is up and running...");
         Map<String, Object> response = new HashMap<>();
-        response.put("message", "API is up and running...");
+        response.put("message", "API is up and running..");
         response.put("time", Instant.now().toString());
         return response;
     }
