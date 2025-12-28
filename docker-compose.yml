@@ -5,6 +5,7 @@ services:
     build:
       context: ./backend
       dockerfile: Dockerfile
+      image: iamvijay17/course-learning-platform-backend:latest
     ports:
       - "8080:8080"
     environment:
